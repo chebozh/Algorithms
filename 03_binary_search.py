@@ -35,7 +35,7 @@ def binary_search(a_list, element):
     if len(a_list) == 0:
         return False
     else:
-        middle = len(a_list) // 2
+        middle = (first + last) // 2
         if a_list[middle] == element:
             return True
         elif element < a_list[middle]:
