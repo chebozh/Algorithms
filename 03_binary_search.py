@@ -7,9 +7,12 @@ We first check the middle element in the list.
 If it is the value we want, we can stop. If it is higher than the value we want, we repeat the search process with
 the portion of the list before the middle element. If it is lower than the value we want, we repeat the search
 process with the portion of the list after the middle element. """
-import time
+import datetime
 
 # Book version
+
+
+
 def binarySearch(alist, item):
     first = 0
     last = len(alist) - 1
@@ -47,16 +50,18 @@ def binary_search(a_list, element):
 if __name__ == '__main__':
     testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42, ]
     print('Book version: ')
-    start_time = time.time()
+    start = datetime.datetime.now()
     print(binarySearch(testlist, 3))
     print(binarySearch(testlist, 13))
-    print("--- %s seconds.---" % (time.time() - start_time))
+    finish = datetime.datetime.now()
+    print("--- %s ---" % (finish - start))
     print('**' * 20)
     print('My version: ')
-    start_time = time.time()
+    start = datetime.datetime.now()
     print(binary_search(testlist, 3))
     print(binary_search(testlist, 13))
-    print("--- %s seconds.---" % (time.time() - start_time))
+    finish = datetime.datetime.now()
+    print("--- %s ---" % (finish - start))
 
 # Book version:
 # False

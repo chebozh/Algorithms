@@ -3,10 +3,12 @@ underlying sequential ordering until we either find what we are looking for or r
 items, we have discovered that the item we were searching for was not present.
 Worst case complexity O(n):
 """
-import time
+import datetime
 
 
 # Book example:
+
+
 def sequentialSearch(alist, item):
     pos = 0
     found = False
@@ -20,7 +22,7 @@ def sequentialSearch(alist, item):
     return found
 
 
-# My (slightly faster) version:
+# Alternative (slightly faster) version:
 def sequential_search(a_list, element):
     for n in a_list:
         if n == element:
@@ -32,16 +34,18 @@ def sequential_search(a_list, element):
 if __name__ == '__main__':
     testlist = [1, 2, 32, 8, 17, 19, 42, 13, 0]
     print('Book version: ')
-    start_time1 = time.time()
+    start = datetime.datetime.now()
     print(sequentialSearch(testlist, 3))
     print(sequentialSearch(testlist, 13))
-    print("--- %s seconds. ---" % (time.time() - start_time1))
+    finish = datetime.datetime.now()
+    print("--- %s ---" % (finish - start))
     print('**' * 20)
-    print('My version: ')
-    start_time2 = time.time()
+    print('Alternative version: ')
+    start = datetime.datetime.now()
     print(sequential_search(testlist, 3))
     print(sequential_search(testlist, 13))
-    print("--- %s seconds. ---" % (time.time() - start_time2))
+    finish = datetime.datetime.now()
+    print("--- %s ---" % (finish - start))
 
 # Results after a few runs:
 # Book version:
