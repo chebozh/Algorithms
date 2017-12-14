@@ -51,9 +51,10 @@ if __name__ == '__main__':
 # Book version:
 # False
 # True
-# --- 2.6941299438476562e-05 seconds. ---
+# --- 0:00:00.000038 ---
 # ****************************************
-# My version:
+# Alternative version:
 # False
 # True
-# --- 1.52587890625e-05 seconds. ---
+# --- 0:00:00.000017 ---
+

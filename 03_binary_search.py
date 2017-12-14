@@ -56,21 +56,22 @@ if __name__ == '__main__':
     finish = datetime.datetime.now()
     print("--- %s ---" % (finish - start))
     print('**' * 20)
-    print('My version: ')
+    print('Alternative version: ')
     start = datetime.datetime.now()
     print(binary_search(testlist, 3))
     print(binary_search(testlist, 13))
     finish = datetime.datetime.now()
     print("--- %s ---" % (finish - start))
 
+# Timings:
 # Book version:
 # False
 # True
-# --- 2.193450927734375e-05 seconds. ---
+# --- 0:00:00.000028 ---
 # ****************************************
-# My version:
+# Alternative version:
 # False
 # True
-# --- 1.0967254638671875e-05 seconds.---
+# --- 0:00:00.000019 ---
 
 
